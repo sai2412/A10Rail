@@ -1,0 +1,61 @@
+.prn{
+    background: #2196F3;
+    /* background-color: red; */
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .prninfo{
+      width: 75%;
+      color: white;
+      font-weight: bold;
+      font-size: larger;
+      /* border: 2px solid red; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .status{
+      margin: 30px auto;
+      width: 50%;
+      height: 3em;
+      padding: 3px 10px;
+  }
+  .prnbtn{
+    background: #fdd361;
+    padding: 15px 30px;
+    color: #404040;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 45px;
+    width: 326px;
+    height: 57px;
+    object-fit: contain;
+    box-shadow: 0 2px 15px 0 rgb(0 0 0 / 7%);
+    cursor: pointer;
+  }
+  .prnstatus{
+      width: 75%;
+      margin: 20px auto;
+      /* border: 2px solid red; */
+  }
+  .ulstyle{
+      margin-left: 50px;
+      line-height: 1.5em;
+  }
+  .gray{
+      padding: 20px 20px;
+      color: #717171;
+      line-height: 1.5em;
+  }
+  .que{
+      width: 60%;
+      margin: 20px 20px;
+      color: #717171;
+      line-height: 1.5em;
+  }
+  .que h3{
+      color: black;
+  }

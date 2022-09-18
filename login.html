@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page | A10RAILS</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .mainBox {
+        margin: 30px auto;
+        width: 75%;
+        /* border: 2px solid red; */
+        border-radius: 19px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+
+        height: 90vh;
+      }
+      .mainBox::before {
+        content: "";
+        background: center / cover no-repeat url(img/bgimg.jpg);
+        height: 90vh;
+        position: absolute;
+        opacity: 0.5;
+        top: 30px;
+        left: 190px;
+        width: 75%;
+        border-radius: 19px;
+        z-index: -1;
+        overflow-x: hidden;
+      }
+      .header {
+        display: flex;
+        justify-content: center;
+        margin: 30px;
+        font-family: "Roboto Condensed", sans-serif;
+      }
+      .form {
+        width: 70%;
+        margin: 20px auto;
+        font-family: "Roboto Condensed", sans-serif;
+      }
+      .userName {
+        margin: 20px 10px;
+      }
+      .UserIn {
+        background: transparent;
+        width: 80%;
+        margin: 0 15px;
+        height: 2em;
+        border-radius: 10px;
+        padding: 2px 10px;
+      }
+      .UserIn:hover {
+        background: white;
+      }
+      .cheak {
+        display: flex;
+        justify-content: center;
+        margin: 20px 15px;
+      }
+      .capcha {
+        background: transparent;
+        margin: 20px 80px;
+        width: 50%;
+        height: 2em;
+        border-radius: 10px;
+        padding: 2px 10px;
+      }
+      .capcha:hover {
+        background: white;
+      }
+      .submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 10px;
+      }
+      #btn {
+        width: 50%;
+        height: 2.5em;
+        outline: none;
+        color: white;
+        font-weight: bolder;
+        background-color: rgb(255, 81, 0);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainBox">
+      <div class="header">
+        <h1>LOGIN</h1>
+        <hr />
+      </div>
+      <div class="form">
+        <form>
+          <div class="userName">
+            UserName :<input
+              type="text"
+              placeholder="User Name"
+              class="UserIn"
+            />
+          </div>
+          <div class="userName">
+            Password :<input
+              type="password"
+              placeholder=" Password"
+              class="UserIn"
+            />
+          </div>
+          <div class="userName">
+            <div class="capchajs"></div>
+            <input type="text" class="capcha" placeholder="Enter Capcha " />
+          </div>
+          <div class="cheak">
+            <input type="checkbox" id="cheakbox" />Login & Booking With OTP
+          </div>
+          <div class="submit">
+            <button type="submit" id="btn" onsubmit=" alertfunction()">
+              SIGN IN
+            </button>
+            <!-- <button id="btn" onclick="alertfunction()" >SIGN IN</button> -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <!-- <script src="index.js"></script> -->
+  <!-- <script src="login.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    let but = document.getElementById("btn");
+    but.addEventListener("click", async function alertfunction(e) {
+      e.preventDefault();
+      let username = document.querySelector(".UserIn").value;
+      let pass = document.querySelector("input[type='password']").value;
+      let capcha = document.getElementsByClassName("capcha").value;
+      let resp =await axios.post('/login.html',{username,pass,capcha});
+      console.log('resp',resp);
+    });
+  </script>
+</html>

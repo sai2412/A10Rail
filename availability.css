@@ -1,0 +1,37 @@
+.availability{
+    background: #2196F3;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 10px 5px;
+}
+.box{
+    color: black;
+    background-color: #F7F7F7;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 10px 10px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    width: 500px;
+    margin: 10px 5px;
+}
+.input{
+    width: 80%;
+    margin: 20px 10px;
+    height: 3em;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+.avai-btn{
+    /* background: #2196F3; */
+    background: #fdd361;
+    width: 80%;
+    height: 2em;
+    border-radius: 13px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+/* footer{
+    position: absolute;
+    bottom: 0;
+} */

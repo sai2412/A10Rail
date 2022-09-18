@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Train Ticket Booking Online | A10RAILS</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="availability.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body onload="initClock()">
+    <header>
+      <nav>
+        <div class="navbar">
+          <div class="logodiv">
+            <h1>A10RAILS</h1>
+          </div>
+          <div class="nav-1">
+            <li><a href="index.html">Train Tickets</a></li>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                Train Information <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="pnr.html">PNR Status</a>
+                <a href="schedule.html">Train schedule</a>
+                <a href="availability.html">Seat availability</a>
+              </div>
+            </div>
+            <li><a href="#">Food On Train</a></li>
+            <div class="dropdown">
+              <button class="dropbtn">
+                More <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="soon.html">Nearby Tourist Places</a>
+                <a href="soon.html">Nearby Hotels</a>
+                <a href="soon.html">Ticket Cancellation</a>
+              </div>
+            </div>
+            <!-- <div class="time">
+              <span id="hour">00</span>:
+              <span id="minutes">00</span>:
+              <span id="seconds">00</span>
+              <span id="period">AM</span>
+            </div> -->
+          </div>
+          <!-- <div class="rightNav">
+            <button class="btn" onclick="myFunction()">Login</button>
+          </div> -->
+        </div>
+      </nav>
+    </header>
+    <div class="availability">
+      <div class="availability-box">
+        <h2>Check Seat Availability</h2>
+        <div class="box">
+          <h3>Search by Station</h3>
+          <input type="text" class="input" placeholder="From" />
+          <input type="text" class="input" placeholder="To" />
+          <div>
+            <button class="avai-btn">Check Trains</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="availability">
+      <div class="availability-box">
+        <h2><span><hr></span><span style="text-align: center;">OR</span><span><hr></span></h2>
+        <div class="box">
+          <h3>Search by Train No</h3>
+          <input type="text" class="input" placeholder="Train Name" />
+          <div>
+            <button class="avai-btn">Check Availability</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <p>&copy; A10RAILS</p>
+    <div class="social">
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <p class="end">Copyright By &copy;2022 A10RAILS.in. All Rights Reserved</p>
+  </footer>
+</html>

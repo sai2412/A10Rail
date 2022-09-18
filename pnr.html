@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Train Ticket Booking Online | A10RAILS</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="pnr.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body onload="initClock()">
+    <header>
+      <nav>
+        <div class="navbar">
+          <div class="logodiv">
+            <h1>A10RAILS</h1>
+          </div>
+          <div class="nav-1">
+            <li><a href="index.html">Train Tickets</a></li>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                Train Information <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="pnr.html">PNR Status</a>
+                <a href="schedule.html">Train schedule</a>
+                <a href="availability.html">Seat availability</a>
+              </div>
+            </div>
+            <li><a href="#">Food On Train</a></li>
+            <div class="dropdown">
+              <button class="dropbtn">
+                More <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="soon.html">Nearby Tourist Places</a>
+                <a href="soon.html">Nearby Hotels</a>
+                <a href="soon.html">Ticket Cancellation</a>
+              </div>
+            </div>
+            <!-- <div class="time">
+              <span id="hour">00</span>: <span id="minutes">00</span>:
+              <span id="seconds">00</span>
+              <span id="period">AM</span>
+            </div> -->
+          </div>
+          <!-- <div class="rightNav">
+            <button class="btn" onclick="myFunction()">Login</button>
+          </div> -->
+        </div>
+      </nav>
+    </header>
+    <div class="prn">
+      <div class="prninfo">
+        <h2>CHECK PNR STATUS</h2>
+        <!-- <div class="status"> -->
+        <input type="text" class="status" placeholder="Enter PNR Number" />
+        <!-- </div> -->
+        <button class="prnbtn">GET STATUS</button>
+      </div>
+    </div>
+    <div class="prnstatus">
+      <h2>PNR Status</h2>
+      <div class="gray">
+        The PNR Status gives details on
+        <li>
+          Seat Information
+          <div class="ulstyle">
+            <ul style="list-style-type: circle">
+              <li>Coach & seat number</li>
+              <li>Waitlist information, if applicable.</li>
+              <li>
+                CNF (Confirmation) of ticket without any seat number. Final
+                seats are shown after chart is prepared in such cases. Class of
+                Travel & Fare
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>Class of Travel & Fare</li>
+        <li>Chart Status (Prepared - Yes/No)</li>
+        <li>Train name & number</li>
+        <li>Booking Status & Current Status ( e.g. GNWL 25 / S2, 16 )</li>
+        <li>
+          Boarding time from source station & Reaching time at destination
+          station.
+        </li>
+        <li>Journey Time</li>
+        To know more about PNR, Check below FAQs
+      </div>
+      <div class="que">
+        <h3>Q) What is a PNR number?</h3>
+        <p>
+          A: PNR (Passenger Name Record) number is an unique ten digit number,
+          that is provided against every booked train ticket. Whether you are
+          booking the ticket online or physically (through the railway station
+          ticket counters), the ticket will certainly have a PNR number. A
+          single PNR number can be provided to a maximum of six passengers, when
+          group booking is sought.
+        </p>
+      </div>
+      <div class="que">
+        <h3>Q) Where can I see my PNR number?</h3>
+        <p>
+          A: Each train ticket, whether it is booked online or through physical ticket counters, comes with a 10 digit PNR number. For online ticket bookings, the PNR number is sent through email and SMS. While for physical ticket bookings, the PNR status is present on the upper left hand side of the printed ticket. You need to input this PNR number to enquire about PNR status, Add Trip and use many other attractive services of RailYatri.
+        </p>
+      </div>
+      <div class="que">
+        <h3>Q) How to check PNR Status at RailYatri.in?</h3>
+        <p>
+          A: Type your PNR in the search box above. Click on ‘Get PNR Status’ button and you will know the latest status of your PNR. Please note that to get automatic PNR Status change updates and alerts you need to allow RailYatri.in access. You can also install RailYatri app for faster status change updates.
+        </p>
+      </div>
+      <div class="que">
+        <h3>Q) What are confirmation chances for my waitlisted ticket?</h3>
+        <p>
+          A: Getting a waitlisted ticket is pretty common when you book any Indian Railway train ticket. So it is important to know the confirmation chances and also the updates for your waitlist. RailYatri helps you with both. Confirmation chances of your waitlisted ticket is shown to you in form of HIGH , MEDIUM & LOW.
+        </p>
+      </div>
+      <div class="que">
+        <h3>Q) How does PNR work for train ticket booking?</h3>
+        <p>
+          A: The Centre of Railway Information Systems(CRIS) runs a database where all information about passengers are fed and stored. A 10-digit PNR number is generated whenever Indian Railways ticket gets booked online (via IRCTC), or offline at ticket counters. PNR generated remains valid till the end of the trip. After certain period old PNRs is flushed out of CRIS database..
+        </p>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <p>&copy; A10RAILS</p>
+    <div class="social">
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <p class="end">Copyright By &copy;2022 A10RAILS.in. All Rights Reserved</p>
+  </footer>
+</html>
